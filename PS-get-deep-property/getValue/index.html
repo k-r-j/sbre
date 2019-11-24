@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+ <meta charset="utf-8">
+
+ <title>Get deep property exercise</title>
+ <meta name="description" content="Get deep property exercise">
+ <meta name="author" content="krzysztof musiał">
+ <style>
+  p{font-size: 14px;}
+  input{padding: 10px; font-size: 16px;}
+ </style>
+</head>
+<body>
+  <div>
+    <pre id="json"></pre>
+    <p>example: person.name.first</p>
+    <input id="input" type="text" placeholder="input"/>
+    <input id="output" type="text" placeholder="output" readonly />
+
+  </div>
+<script>
+var data = {
+  person: {
+   name: {
+     first: 'FirstName',
+     middleInitial: 'I',
+     lastName: 'LastName'
+   }
+  }
+}
+document.getElementById("json").innerHTML = JSON.stringify(data, undefined, 2);
+
+function getValue(path, obj){
+  var array = path.split('.');
+
+  return array.reduce(function(prevVal, currVal) {
+    return prevVal[currVal] ;
+  }, obj);
+}
+
+var input = document.getElementById("input");
+input.addEventListener("keyup", function(event) {
+  if (event.keyCode === 13) {
+    event.preventDefault();
+
+    var value = getValue(this.value, data);
+    document.getElementById("output").value = value;
+  }
+});
+
+
+
+</script>
+
+</body>
+</html>

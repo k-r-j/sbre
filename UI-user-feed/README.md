@@ -11,3 +11,4 @@
 - After you complete the exercise, provide notes below on how your code can be ran whether it be by simply opening a index.html file or through an npm command
 
 ## Candidate Notes:
+run 'npm start' in console
