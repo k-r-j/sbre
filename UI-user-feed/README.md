@@ -11,4 +11,9 @@
 - After you complete the exercise, provide notes below on how your code can be ran whether it be by simply opening a index.html file or through an npm command
 
 ## Candidate Notes:
-run 'npm start' in console
+1. clone repo from github (i assume that it's quite obvious step :)
+2. in console go to 'UI-user-feed/user-feed' folder
+3. npm install
+4. npm start
+5. app should be working on http://localhost:3000/
+6. enjoy!
