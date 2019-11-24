@@ -12,6 +12,6 @@
 
 ## Candidate Notes:
 
-- open index.html
+- open getValue/index.html
 - you will be able to see object structure which is hardcoded and can be change inside index.html file
 - type path in first text input and press ENTER to see result in output field
